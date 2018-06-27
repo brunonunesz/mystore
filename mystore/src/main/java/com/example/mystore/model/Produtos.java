@@ -1,6 +1,8 @@
 package com.example.mystore.model;
 
+import java.sql.Timestamp;
 import java.util.Calendar;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,11 +21,11 @@ public class Produtos {
 	@Column(name = "P_VENUE")
 	private String name;
 	@Column(name = "P_DATE")
-	private Calendar date;
+	private Timestamp date;
 	
 	
 
-	public Produtos(long id, String name, Calendar date) {
+	public Produtos(long id, String name, Timestamp date) {
 		this.id = id;
 		this.name = name;
 		this.date = date;
@@ -48,16 +50,18 @@ public class Produtos {
 		this.name = name;
 	}
 
-	public Calendar getDate() {
+	
+	public Timestamp getDate() {
 		return date;
 	}
 
-	public void setDate(Calendar date) {
+	public void setDate(Timestamp date) {
 		this.date = date;
 	}
-	
+
 	@Override
 	public String toString() {
+		
 		return name + " " + id + " " + date + "\n";
 	}
 }
