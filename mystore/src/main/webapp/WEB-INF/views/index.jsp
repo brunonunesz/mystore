@@ -71,7 +71,7 @@
 	<br />
 	<footer class="container">
 		<p>
-			<img src="logo.jpg" class="rounded" alt="Keyrus Digital"
+			<img src="logo/logo.jpg" class="rounded"s alt="Keyrus Digital"
 				width="200px"> page generated in Fri Jan 19 15:56:43 BRST 2018
 		</p>
 	</footer>

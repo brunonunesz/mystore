@@ -24,15 +24,13 @@ public class ProdutoDAO {
 	}
 
 	public List<Produtos> findProduct(String filter) {
-		Query query = entityManager.createNativeQuery("select p.P_BASEPRODUCT, p.P_VENUE, p.P_DATE from PRODUCTS p where p.P_VENUE like :venue", Produtos.class);
-		List<Produtos> list = query.setParameter("venue", "%" + filter + "%").getResultList();
+		
+		Query query = entityManager.createNativeQuery("select p.P_BASEPRODUCT, p.P_VENUE, p.P_DATE from PRODUCTS p where p.P_VENUE = :venue", Produtos.class);
+		List<Produtos> list = query.setParameter("venue", filter).getResultList();
 		
 		
 		
 		return list;
-		
-		
-		
 		
 	}
 

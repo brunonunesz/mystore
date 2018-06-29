@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.mystore.daos.ProdutoDAO;
@@ -24,5 +25,9 @@ public class DetailsController {
 		return view;
 	}
 	
-	
+	@GetMapping("/products/{id}")
+	@ResponseBody
+	public Produtos detailsJSON(@PathVariable("id") long id) {
+		return repository.findDetails(id);
+	}
 }

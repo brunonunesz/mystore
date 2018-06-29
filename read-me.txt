@@ -1,0 +1,65 @@
+
+-------------------------
+       My Store
+-------------------------
+
+This small store needs:
+
+1 - Home page bootstrap based with:
+
+a) all products list showing only p_venue field.
+
+b) search field by p_venue  (this search should be in back end, not JavaScript based)
+
+c) any product should link to its detail page.
+
+----------------------------------------------------------
+
+2 - Detail page with these fields:
+
+P_BASEPRODUCT - id - number
+P_VENUE - name - char
+P_DATE - date - time formatted like 23/11/2015 17:43:48.0
+
+----------------------------------------------------------
+
+3 - Two ReST services
+
+a) URI /product/list 
+JSON Result: 
+
+[{"id":1,"name":"apple"},{"id":2,"name":"orange"}]
+
+b) URI /product/by-id/{id} 
+JSON Result: 
+
+{"id":1,"name":"apple"}
+
+----------------------------------------------------------
+
+4 - Two Integration Test
+
+a) Test if your product table has more than 5 rows.
+
+b) Test that ReST service /product/by-id/8796093054977 returns:
+
+{"id":8796093054977,"name":"hybris Munich, Germany"}
+
+----------------------------------------------------------
+
+5 - Core Technology 
+
+a) MySQL 5.x (use "sql\products.sql" script)
+
+b) Spring Boot 1.x
+
+c) Bootstrap 4.x
+
+d) JUnit 4.x
+
+e) JSP or Thymeleaf
+
+f) JDBC or Hibernate or Spring Data
+----------------------------------------------------------
+
+ 
